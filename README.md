@@ -7,4 +7,4 @@
 - `supabase/migrations/` — 방명록 테이블과 보안 규칙(읽기·쓰기만 허용, 수정·삭제 불가, 도배 방지)
 
 DB 변경: `supabase db push --remote`
-배포: `vercel --prod`
+배포: main 브랜치에 push하면 Vercel이 자동 배포 (수동: `vercel --prod`)
