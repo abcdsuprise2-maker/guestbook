@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김하늘 · 소개</title>
+  <meta name="description" content="김하늘의 자기소개와 방명록">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="avatar" aria-hidden="true">하늘</div>
+      <div>
+        <h1>안녕하세요, 김하늘입니다</h1>
+        <p class="lead">숫자를 좋아하는 평범한 직장인. 퇴근 후엔 코딩을 배우고 있어요.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>저는요</h2>
+      <ul class="facts">
+        <li><span>☕</span> 아침엔 무조건 아메리카노</li>
+        <li><span>⛰️</span> 주말엔 동네 뒷산 등산</li>
+        <li><span>🐈</span> 고양이 두 마리와 동거 중</li>
+        <li><span>💻</span> 요즘 관심사: 웹 만들기, 자동화</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>이 페이지는</h2>
+      <p>GitHub에 코드를 올리고, Vercel로 배포하고, 방명록은 Supabase 데이터베이스에 저장돼요.
+         강의를 따라 처음 만들어 본 웹페이지입니다.</p>
+    </section>
+
+    <section class="card" id="guestbook">
+      <h2>방명록</h2>
+      <form id="gb-form" autocomplete="off">
+        <input id="gb-name" name="name" maxlength="20" placeholder="이름" required>
+        <textarea id="gb-message" name="message" maxlength="300" rows="3" placeholder="한마디 남겨주세요 (300자까지)" required></textarea>
+        <!-- 사람은 안 보이는 칸: 봇만 채운다 -->
+        <input class="hp" id="gb-website" name="website" tabindex="-1" aria-hidden="true">
+        <div class="row">
+          <span id="gb-status" role="status"></span>
+          <button type="submit">남기기</button>
+        </div>
+      </form>
+      <ol id="gb-list" aria-live="polite"></ol>
+    </section>
+
+    <footer>※ 이 페이지의 인물·내용은 강의 실습용 가상 정보입니다.</footer>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

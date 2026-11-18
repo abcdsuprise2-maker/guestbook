@@ -1,0 +1,65 @@
+:root {
+  --bg: #f6f4ef;
+  --card: #ffffff;
+  --ink: #1f2328;
+  --muted: #6b6f76;
+  --line: #e4e0d8;
+  --accent: #2f6f5e;
+  --accent-ink: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --card: #1e2125;
+    --ink: #e8e6e1;
+    --muted: #9a9ea5;
+    --line: #2d3136;
+    --accent: #6cc3a8;
+    --accent-ink: #10221d;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+main { max-width: 640px; margin: 0 auto; padding: 48px 16px 64px; }
+.hero { display: flex; gap: 20px; align-items: center; margin-bottom: 28px; }
+.avatar {
+  flex: none; width: 76px; height: 76px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--accent); color: var(--accent-ink); font-weight: 700;
+}
+h1 { font-size: 1.6rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+h2 { font-size: 1.05rem; margin: 0 0 12px; }
+.lead { margin: 0; color: var(--muted); }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 20px 22px; margin-bottom: 16px;
+}
+.card p { margin: 0; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.facts span { display: inline-block; width: 1.6em; }
+form { display: grid; gap: 10px; margin-bottom: 18px; }
+input, textarea {
+  width: 100%; font: inherit; color: inherit; background: var(--bg);
+  border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+}
+input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+textarea { resize: vertical; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+#gb-status { color: var(--muted); font-size: 0.9rem; }
+button {
+  font: inherit; font-weight: 600; border: 0; border-radius: 10px; padding: 9px 18px;
+  background: var(--accent); color: var(--accent-ink); cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: default; }
+#gb-list { list-style: none; margin: 0; padding: 0; }
+#gb-list li { border-top: 1px solid var(--line); padding: 12px 0; }
+#gb-list .meta { font-size: 0.85rem; color: var(--muted); }
+#gb-list .meta b { color: var(--ink); margin-right: 6px; }
+#gb-list .msg { white-space: pre-wrap; word-break: break-word; margin-top: 2px; }
+footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 28px; }
